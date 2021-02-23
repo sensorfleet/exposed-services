@@ -1,0 +1,35 @@
+# service-id:         # A unique ID (inside this file) for the service
+#   name: Service X   # A human-readable name for the service
+#   ports:            # A list of ports or port ranges that the service uses
+#     - 6666          # A single port as a number or a string
+#     - "7777"
+#     - "8888-9999"   # A port range
+#   description: |
+#     A description that explains what the service 
+#     is and why exposing it might not be ideal.
+#     Additionally give some ideas to remedy the 
+#     situation: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+
+rdp:
+  name: RDP
+  ports:
+    - 3389
+  description: |
+    "Although Remote Desktop Services (RDS) can be a fast way to
+    enable remote access for employees, there are a number of security
+    challenges that need to be considered before using this as a
+    remote access strategy." Security guidance for remote desktop
+    adoption, https://www.microsoft.com/security/blog/2020/04/16/security-guidance-remote-desktop-adoption/
+
+
+vnc:
+  name: VNC
+  ports:
+    - 5900
+  description: |
+    "By default, RFB is not a secure protocol. While passwords are not
+    sent in plain-text (as in telnet), cracking could prove successful
+    if both the encryption key and encoded password were sniffed from
+    a network. For this reason it is recommended that a password of at
+    least 8 characters be used." https://en.wikipedia.org/wiki/Virtual_Network_Computing#Security
+
