@@ -6,6 +6,6 @@ The current categories are:
 
  * [`databases.yaml`](./databases.yaml): exposed databases
  * `file-shares.yaml`: exposed file shares
- * `remote-management.yaml`: exposed remote management services
+ * [`remote-management.yaml`]: exposed remote management services
 
 Contributions to these lists - and suggestions for additional lists - are welcome.
