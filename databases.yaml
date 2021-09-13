@@ -4,27 +4,29 @@
 #     - 6666          # A single port as a number or a string
 #     - "7777"
 #     - "8888-9999"   # A port range
-#   description: |
-#     A description that explains what the service 
+#   description: >
+#     A description that explains what the service
 #     is and why exposing it might not be ideal.
-#     Additionally give some ideas to remedy the 
+#     Additionally give some ideas to remedy the
 #     situation: https://www.youtube.com/watch?v=dQw4w9WgXcQ
 
 mongodb:
   name: MongoDB
   ports:
     - "27017-27019"
-  description: |
-    Unsecured Mongo databases accessible online are a common root cause for data breaches.
-    In fact, the average time for an exposed Mongo database to get breached is 13 hours.
-    Check whether your service really needs to be online, and if so, that it implements at least
-    the following security measures: https://docs.mongodb.com/manual/administration/security-checklist/
-    
+  description: >
+    Unsecured Mongo databases accessible online are a common root cause for data
+    breaches. In fact, the average time for an exposed Mongo database to get
+    breached is 13 hours. Check whether your service really needs to be online,
+    and if so, that it implements at least the following security measures:
+    https://docs.mongodb.com/manual/administration/security-checklist/
+
 redis:
   name: Redis
   ports:
     - 6379
-  description: |
-    Redis is designed to be accessed by trusted clients inside trusted environments.
-    This means that usually it is not a good idea to expose the Redis instance directly to the internet.
-    Check whether your service really needs to be online.
+  description: >
+    Redis is designed to be accessed by trusted clients inside trusted
+    environments. This means that usually it is not a good idea to expose the
+    Redis instance directly to the internet. Check whether your service really
+    needs to be online.
