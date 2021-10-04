@@ -6,7 +6,7 @@ ports associated with them.
 The current categories are:
 
 - [`databases.yaml`](./databases.yaml): exposed databases
-- `file-shares.yaml`: exposed file shares
+- [`file-shares.yaml`](./file-shares.yaml): exposed file shares
 - [`remote-management.yaml`](./remote-management.yaml): exposed remote
   management services
 

@@ -1,0 +1,44 @@
+# service-id:         # A unique ID (inside this file) for the service
+#   name: Service X   # A human-readable name for the service
+#   ports:            # A list of ports or port ranges that the service uses
+#     - 6666          # A single port as a number or a string
+#     - "7777"
+#     - "8888-9999"   # A port range
+#   description: >
+#     A description that explains what the service
+#     is and why exposing it might not be ideal.
+#     Additionally give some ideas to remedy the
+#     situation: https://www.youtube.com/watch?v=dQw4w9WgXcQ  §
+
+ftp:
+  name: FTP
+  ports:
+    - 20-21
+    - 989
+  description: >
+    File Transfer Protocol
+
+tftp:
+  name: TFTP
+  ports:
+    - 69
+  description: >
+    Trivial File Transfer Protocol
+
+microsoft:
+  name: Microsoft services
+  ports:
+    - 135-139
+    - 445
+  description: >
+    Various Microsoft services including Remote Procedure Call, NetBIOS and
+    Microsoft Directory Services for Active Directory (AD)
+
+bittorrent:
+  name: BitTorrent
+  ports:
+    - 6681
+  description: >
+    BitTorrent is a communication protocol for peer-to-peer file sharing (P2P),
+    which enables users to distribute data and electronic files over the
+    Internet in a decentralized manner.
