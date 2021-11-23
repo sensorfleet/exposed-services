@@ -4,32 +4,90 @@
 #     - 6666          # A single port as a number or a string
 #     - "7777"
 #     - "8888-9999"   # A port range
-#   description: |
-#     A description that explains what the service 
+#   description: >
+#     A description that explains what the service
 #     is and why exposing it might not be ideal.
-#     Additionally give some ideas to remedy the 
+#     Additionally give some ideas to remedy the
 #     situation: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+
+ssh:
+  name: SSH
+  ports:
+    - 22
+  description: >
+    SSH is typically used to log into a remote machine and execute commands, but
+    it also supports tunneling, forwarding TCP ports and X11 connections; it can
+    transfer files using the associated SSH file transfer (SFTP) or secure copy
+    (SCP) protocols. https://en.wikipedia.org/wiki/Secure_Shell#Usage
+
+telnet:
+  name: Telnet
+  ports:
+    - 23
+  description: >
+    Telnet, by default, does not encrypt any data sent over the connection,
+    including passwords. https://en.wikipedia.org/wiki/Telnet#Security
+
+rcp:
+  name: RSH
+  ports:
+    - 513-514
+  description: >
+    Remote Shell (RSH) and Remote Copy (RCP) port. Also used by several
+    malwares.
+
+rpc:
+  name: Windows RPC over HTTP and HTTPS
+  ports:
+    - 593-594
+  description: >
+    Windows RPC over HTTP and HTTPS
 
 rdp:
   name: RDP
   ports:
     - 3389
-  description: |
-    "Although Remote Desktop Services (RDS) can be a fast way to
-    enable remote access for employees, there are a number of security
-    challenges that need to be considered before using this as a
-    remote access strategy." Security guidance for remote desktop
-    adoption, https://www.microsoft.com/security/blog/2020/04/16/security-guidance-remote-desktop-adoption/
-
+  description: >
+    "Although Remote Desktop Services (RDS) can be a fast way to enable remote
+    access for employees, there are a number of security challenges that need to
+    be considered before using this as a remote access strategy." Security
+    guidance for remote desktop adoption,
+    https://www.microsoft.com/security/blog/2020/04/16/security-guidance-remote-desktop-adoption/
 
 vnc:
   name: VNC
   ports:
-    - 5900
-  description: |
-    "By default, RFB is not a secure protocol. While passwords are not
-    sent in plain-text (as in telnet), cracking could prove successful
-    if both the encryption key and encoded password were sniffed from
-    a network. For this reason it is recommended that a password of at
-    least 8 characters be used." https://en.wikipedia.org/wiki/Virtual_Network_Computing#Security
+    - 5800-5805
+    - 5900-5905
+  description: >
+    "By default, RFB is not a secure protocol. While passwords are not sent in
+    plain-text (as in telnet), cracking could prove successful if both the
+    encryption key and encoded password were sniffed from a network. For this
+    reason it is recommended that a password of at least 8 characters be used."
+    https://en.wikipedia.org/wiki/Virtual_Network_Computing#Security
 
+docker:
+  name: Docker daemon
+  ports:
+    - 2375-2376
+  description: >
+    Remote communication with Docker daemon. Port 2375 is un-encrypted by
+    default.
+
+x:
+  name: X Window System
+  ports:
+    - 6000-6005
+  description: >
+    X Window System
+
+#
+# Firewalls
+#
+
+fortinet:
+  name: Fortinet FortiGate firewall
+  ports:
+    - 541
+  description: >
+    Management port of Fortinet FortiGate firewall.
