@@ -10,16 +10,6 @@
 #     Additionally give some ideas to remedy the
 #     situation: https://www.youtube.com/watch?v=dQw4w9WgXcQ
 
-ssh:
-  name: SSH
-  ports:
-    - 22
-  description: >
-    SSH is typically used to log into a remote machine and execute commands, but
-    it also supports tunneling, forwarding TCP ports and X11 connections; it can
-    transfer files using the associated SSH file transfer (SFTP) or secure copy
-    (SCP) protocols. https://en.wikipedia.org/wiki/Secure_Shell#Usage
-
 telnet:
   name: Telnet
   ports:
